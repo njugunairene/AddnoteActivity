@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
+            app:title="AddNoteActivity"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -26,21 +27,24 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:orientation="vertical"
     android:padding="16dp">
+
     <EditText
         android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Title..."
         android:layout_marginBottom="8dp"
-        />
+        android:hint="Title..." />
     <EditText
         android:id="@+id/etNote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Note..."
+        android:hint="NoteText..."
+
         android:lines="7"
         android:gravity="top"
-        android:layout_margin="3dp"/>
+        android:layout_margin="3dp"
+        android:background="@drawable/bg_edittext_pink"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,18 +53,32 @@
         android:id="@+id/btnAddPhoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Photo"/>
+        android:text="Add Photo"
+        android:drawableLeft="@drawable/ic_add_a_photo_pink_600_24dp"
+        android:background="@color/colorWhite"
+        android:drawablePadding="4dp"
+        android:textAllCaps="false"
+        />
+
+
+
 
     <View
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_weight="1"/>
 
-    <Button
-        android:id="@+id/btnAddVoiceNote"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Voice Note"/>
+        <Button
+            android:id="@+id/btnAddVoiceNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:text="Add Voice Note"
+            android:drawableLeft="@drawable/ic_mic_pink_600_24dp"
+            android:drawablePadding="4dp"
+            android:textAllCaps="false"
+
+            />
     </LinearLayout>
     <Button
         android:id="@+id/btnSave"
@@ -68,13 +86,10 @@
         android:layout_height="wrap_content"
         android:text="SAVE"
         android:textColor="@color/colorWhite"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimary"
         android:layout_marginTop="10dp"/>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/waterlily"/>
+
 </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
